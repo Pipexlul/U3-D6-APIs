@@ -16,8 +16,8 @@
     <link rel="stylesheet" href="assets/css/pages/index.css" />
 
     <script
-      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js"
-      integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA=="
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.js"
+      integrity="sha512-gQhCDsnnnUfaRzD8k1L5llCCV6O9HN09zClIzzeJ8OJ9MpGmIlCxm+pdCkqTwqJ4JcjbojFr79rl2F1mzcoLMQ=="
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
@@ -54,9 +54,12 @@
               <select id="input-currencies"></select>
               <button id="btn-search">Buscar</button>
             </div>
-            <p>Resultado conversión: <span id="conversion-result">0</span></p>
+            <h4>
+              Resultado conversión: $<span id="conversion-result">0</span>
+            </h4>
+            <p id="error-display"></p>
           </div>
-          <div>
+          <div class="chart-wrapper">
             <canvas id="graph-last-days"></canvas>
           </div>
         </div>
