@@ -1,0 +1,21 @@
+.btn {
+  min-height: 50px;
+  padding: 10px;
+  border-radius: 20px;
+  background-color: var(--fel-button-bg-color);
+}
+
+.btn:hover {
+  background-color: var(--fel-button-bg-color-hover);
+}
+
+.btn-delete {
+  padding: 5px;
+  border-radius: 20px;
+  background-color: var(--fel-button-delete-bg-color);
+  color: white;
+}
+
+.btn-delete:hover {
+  background-color: var(--fel-button-delete-bg-color-hover);
+}

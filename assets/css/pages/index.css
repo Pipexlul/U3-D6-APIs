@@ -1,0 +1,24 @@
+.main-display {
+  flex-direction: column;
+}
+
+.converter-menu {
+  flex-direction: column;
+  row-gap: 30px;
+  background-color: var(--fel-converter-bg-color);
+  color: white;
+  width: 40vmin;
+  padding: 20px;
+  border-radius: 20px;
+  text-align: center;
+}
+
+.converter-section {
+  width: 100%;
+  flex-direction: column;
+  row-gap: 10px;
+}
+
+.input-basic {
+  width: 65%;
+}

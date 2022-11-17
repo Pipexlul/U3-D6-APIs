@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="assets/css/normalize.css" />
+    <link rel="stylesheet" href="assets/css/base.css" />
+
+    <link rel="stylesheet" href="assets/css/components/navbar.css" />
+    <link rel="stylesheet" href="assets/css/components/footer.css" />
+
+    <link rel="stylesheet" href="assets/css/components/button.css" />
+
+    <link rel="stylesheet" href="assets/css/pages/index.css" />
+
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.min.js"
+      integrity="sha512-tQYZBKe34uzoeOjY9jr3MX7R/mo7n25vnqbnrkskGr4D6YOoPYSpyafUAzQVjV6xAozAqUFIEFsCO4z8mnVBXA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+
+    <script src="assets/js/app.js" defer></script>
+
+    <title>FG: U3 Desafio 6</title>
+  </head>
+  <body>
+    <div class="content">
+      <nav class="flex-container navbar">
+        <h2>Unidad 3 - Desafío 6: APIs</h2>
+        <div>
+          <ul class="flex-container">
+            <li><a href="index.html">Index</a></li>
+          </ul>
+        </div>
+      </nav>
+      <main class="flex-container">
+        <div class="main-display flex-container">
+          <div class="flex-container converter-menu">
+            <h3>Conversor de monedas nacional</h3>
+            <div class="converter-section flex-container">
+              <h4>Pesos CLP</h4>
+              <input
+                id="input-clp"
+                class="input-basic"
+                type="number"
+                placeholder="Ingrese el monto en CLP"
+              />
+            </div>
+            <div class="converter-section flex-container">
+              <h5>Moneda a convertir:</h5>
+              <select id="input-currencies"></select>
+              <button id="btn-search">Buscar</button>
+            </div>
+            <p>Resultado conversión: <span id="conversion-result">0</span></p>
+          </div>
+          <div>
+            <canvas id="graph-last-days"></canvas>
+          </div>
+        </div>
+      </main>
+      <footer class="flex-container footer">
+        <div>
+          <h4>Felipe Guajardo. 2022</h4>
+        </div>
+        <div class="footer-desc">
+          <p>
+            Trabajo asignado por Academia Desafio Latam por el curso Full-Stack
+            Javascript
+          </p>
+        </div>
+      </footer>
+    </div>
+  </body>
+</html>

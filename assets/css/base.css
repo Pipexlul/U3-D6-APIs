@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --fel-page-color: rgb(174, 174, 182);
+  --fel-navbar-color: rgb(204, 255, 102);
+  --fel-navbar-color2: rgb(100, 122, 51);
+  --fel-footer-color: rgb(58, 58, 58);
+
+  --fel-navbar-h2-colorgrad-1: rgb(48, 201, 28);
+  --fel-navbar-h2-colorgrad-2: rgb(33, 24, 160);
+  --fel-navbar-a-color: rgb(0, 0, 0);
+
+  --fel-footer-author-color: rgb(255, 255, 255);
+  --fel-footer-desc-color: rgb(192, 192, 192);
+
+  --fel-button-bg-color: rgb(150, 197, 181);
+  --fel-button-bg-color-hover: rgb(179, 233, 215);
+
+  --fel-button-delete-bg-color: rgb(161, 12, 12);
+  --fel-button-delete-bg-color-hover: rgb(201, 15, 15);
+
+  --fel-converter-bg-color: rgb(24, 9, 82);
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.grid-container {
+  display: grid;
+}
+
+.content {
+  min-height: 100vh;
+  background-color: var(--fel-page-color);
+  display: grid;
+
+  grid-template-rows: 100px auto 100px;
+}
+
+main {
+  padding: 40px 0;
+}
+
+.main-display {
+  background-color: white;
+  width: 90%;
+  border-radius: 50px;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.07), 0 0 7px rgb(0, 0, 0, 0.6);
+  padding: 30px;
+}
