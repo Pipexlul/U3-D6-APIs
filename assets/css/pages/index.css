@@ -22,3 +22,11 @@
 .input-basic {
   width: 65%;
 }
+
+#error-display {
+  color: red;
+}
+
+.chart-wrapper {
+  width: 80%;
+}
