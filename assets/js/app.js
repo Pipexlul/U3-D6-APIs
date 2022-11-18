@@ -119,10 +119,9 @@ const doConversionAndDrawGraph = (ev) => {
   if (currencyObj) {
     const convValue = Number(clpAmount) / currencyObj.valor;
 
-    conversionResult.textContent = intlObj.format(convValue);
+    conversionResult.textContent = intlObj.format(convValue.toFixed(2));
+    drawGraph(currencyObj.codigo);
   }
-
-  drawGraph(currencyObj.codigo);
 };
 
 const firstTimeSetup = async () => {
