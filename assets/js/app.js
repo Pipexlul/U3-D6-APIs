@@ -15,6 +15,16 @@ const getErrorMessage = (error, msg, person) => {
   return `Algo ha salido mal al ${msg}. Entregale este mensaje a ${person}: ${error.message}`;
 };
 
+const validateResponse = (response) => {
+  if (!response.ok) {
+    const error = `HTTP response code: ${response.status}`;
+
+    return new Error(error);
+  }
+
+  return true;
+};
+
 const getGraphData = (currencyData) => {
   const result = [];
 
@@ -79,6 +89,12 @@ const getCurrencyData = async (currencyCode) => {
     const endpoint = `https://mindicador.cl/api/${currencyCode}/`;
 
     const currencyData = await fetch(endpoint);
+
+    const validation = validateResponse(currencyData);
+    if (validation instanceof Error) {
+      throw validation;
+    }
+
     const jsonData = await currencyData.json();
 
     return jsonData;
@@ -127,6 +143,12 @@ const doConversionAndDrawGraph = (ev) => {
 const firstTimeSetup = async () => {
   try {
     const mainData = await fetch("https://mindicador.cl/api/");
+
+    const validation = validateResponse(mainData);
+    if (validation instanceof Error) {
+      throw validation;
+    }
+
     const jsonData = await mainData.json();
 
     for (const key of Object.keys(jsonData)) {
